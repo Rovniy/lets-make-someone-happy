@@ -46,3 +46,6 @@ If you have state that's important to retain within a component, consider creati
 import { writable } from 'svelte/store'
 export default writable(0)
 ```
+
+Design:
+https://www.figma.com/file/IRotf30Bg11Jdd1MRsDH1B/Ravy-projects?node-id=527%3A48
