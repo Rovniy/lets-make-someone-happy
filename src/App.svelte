@@ -1,12 +1,14 @@
 <script lang="ts">
     import Header from './lib/Header.svelte'
     import Section_one from './lib/Section_one.svelte'
+    import Section_two from './lib/Section_two.svelte'
 </script>
 
 <main class="main">
 	<div class="wrapper">
 		<Header />
 		<Section_one />
+		<Section_two />
 	</div>
 </main>
 
@@ -21,6 +23,7 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
+	background: #F4F4F4
 
 	.wrapper
 		position: relative

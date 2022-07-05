@@ -24,13 +24,14 @@
 	max-width: $width_content
 
 	.title
-		font-size: 35px
+		font-size: 30px
 		color: #262626
 		font-weight: 900
 		text-align: center
 		line-height: 95%
 		text-transform: uppercase
 		padding: 0 20px
+		margin-top: 100px
 
 		@media screen and (min-width: 720px)
 			font-size: 64px
