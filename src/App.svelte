@@ -3,6 +3,7 @@
     import Section_one from './lib/Section_one.svelte'
     import Section_two from './lib/Section_two.svelte'
     import Section_three from './lib/Section_three.svelte'
+    import Section_four from './lib/Section_four.svelte'
 </script>
 
 <main class="main">
@@ -11,6 +12,12 @@
 		<Section_one />
 		<Section_two />
 		<Section_three />
+	</section>
+
+	<section class="wrapper_color_1">
+		<article class="article">
+			<Section_four />
+		</article>
 	</section>
 </main>
 
@@ -34,4 +41,17 @@
 		justify-content: center
 		align-items: center
 		max-width: $width_content
+
+	.wrapper_color_1
+		width: 100%
+		background: #262626
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin-top: 120px
+
+		.article
+			max-width: $width_content
+			padding: 0 40px
 </style>

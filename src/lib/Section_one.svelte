@@ -1,3 +1,7 @@
+<script>
+	import PayButton from './components/PayButton.svelte'
+</script>
+
 <article class="section_one">
 	<h1 class="title">Just give $1 that will change the life of one of us</h1>
 
@@ -6,10 +10,7 @@
 		<span class="message">Already collected</span>
 	</div>
 
-	<div class="button_area">
-		<button type="button" class="button">Make you happy for $1</button>
-		<span class="info">You already sent $1</span>
-	</div>
+	<PayButton/>
 </article>
 
 <style lang="sass">
@@ -52,26 +53,4 @@
 			color: #3A3A3A
 			font-weight: 800
 			text-transform: uppercase
-
-	.button_area
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
-		gap: 30px
-
-		.button
-			background: #34FFB6
-			border: 1px solid #34FFB6
-			border-radius: 50px
-			padding: 20px 50px
-			font-size: 16px
-			font-weight: 700
-			color: #262626
-			cursor: pointer
-
-		.info
-			font-weight: 700
-			font-size: 14px
-			color: rgba(0, 0, 0, 0.5)
 </style>

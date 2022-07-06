@@ -18,7 +18,7 @@
 	position: relative
 	padding: 58px 0 30px 30px
 
-	@media screen and (min-width: 1100px)
+	@media screen and (min-width: 1240px)
 		max-width: 610px
 
 		&.align-self-start

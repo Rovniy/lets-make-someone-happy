@@ -62,6 +62,6 @@
 		align-items: center
 		gap: 100px
 
-		@media screen and (min-width: 1100px)
+		@media screen and (min-width: 1240px)
 			width: 900px
 </style>
