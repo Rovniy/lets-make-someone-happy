@@ -6,6 +6,7 @@
     import Section_four from './lib/Section_four.svelte'
     import Section_five from './lib/Section_five.svelte'
     import Section_six from './lib/Section_six.svelte'
+    import Footer from './lib/Footer.svelte'
 </script>
 
 <main class="main">
@@ -31,6 +32,10 @@
 			<Section_six />
 		</article>
 		<img class="image" src="./src/assets/images/take_money.svg" alt="take money">
+	</section>
+
+	<section class="wrapper">
+		<Footer />
 	</section>
 </main>
 

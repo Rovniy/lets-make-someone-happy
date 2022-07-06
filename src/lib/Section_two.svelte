@@ -19,6 +19,7 @@
 		font-weight: 700
 		margin: 120px 0
 		text-transform: uppercase
+		text-align: center
 
 		@media screen and (min-width: 720px)
 			font-size: 36px
@@ -29,4 +30,5 @@
 		font-weight: 600
 		margin-bottom: 120px
 		text-align: center
+		padding: 0 20px
 </style>
