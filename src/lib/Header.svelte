@@ -17,6 +17,10 @@
 	background: transparent
 	width: 100%
 	z-index: 1
+	margin-top: 40px
+
+	@media screen and (min-width: 720px)
+		margin-top: 0
 
 	.action
 		font-size: 16px
