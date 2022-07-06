@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          source: "dist"
+          source: "/dist/*"
           target: ${{ secrets.REMOTE_TARGET }}
 
       - name: Print Info
