@@ -4,6 +4,8 @@
     import Section_two from './lib/Section_two.svelte'
     import Section_three from './lib/Section_three.svelte'
     import Section_four from './lib/Section_four.svelte'
+    import Section_five from './lib/Section_five.svelte'
+    import Section_six from './lib/Section_six.svelte'
 </script>
 
 <main class="main">
@@ -18,6 +20,17 @@
 		<article class="article">
 			<Section_four />
 		</article>
+	</section>
+
+	<section class="wrapper">
+		<Section_five />
+	</section>
+
+	<section class="wrapper_color_2">
+		<article class="article">
+			<Section_six />
+		</article>
+		<img class="image" src="./src/assets/images/take_money.svg" alt="take money">
 	</section>
 </main>
 
@@ -54,4 +67,34 @@
 		.article
 			max-width: $width_content
 			padding: 0 40px
+
+	.wrapper_color_2
+		position: relative
+		width: 100%
+		background: #017AF1
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin-top: 120px
+
+		.article
+			width: 100%
+			height: 600px
+			@media screen and (min-width: 1240px)
+				padding: 0 40px
+				width: $width_content
+				height: auto
+
+	.image
+		position: absolute
+		bottom: 0
+		width: 300px
+
+		@media screen and (min-width: 480px)
+			width: auto !important
+
+		@media screen and (min-width: 1240px)
+			right: 0
+			top: -17px
 </style>
