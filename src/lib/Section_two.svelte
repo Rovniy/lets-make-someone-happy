@@ -14,6 +14,7 @@
 	color: #262626
 	font-family: 'Montserrat', sans-serif
 	z-index: 2
+	margin-top: -80px
 
 	.title
 		font-size: 30px

@@ -28,4 +28,5 @@
 		font-weight: 800
 		font-size: 36px
 		color: #FFFFFF
+		padding: 0 40px
 </style>

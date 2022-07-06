@@ -10,9 +10,14 @@
 </script>
 
 <main class="main">
+	<section class="main_wrapper">
+		<article class="wrapper">
+			<Header />
+			<Section_one />
+		</article>
+	</section>
+
 	<section class="wrapper">
-		<Header />
-		<Section_one />
 		<Section_two />
 		<Section_three />
 	</section>
@@ -53,20 +58,29 @@
 	background: #F4F4F4
 	z-index: 1
 
-	&:after
-		filter: none
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
+	.main_wrapper
+		width: 100%
+		height: 100vh
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: center
 		background-image: url('./assets/images/image_main.png')
-		width: 100%
-		height: 100vh
-		z-index: 0
+
+		@media screen and (min-width: 720px)
+			height: 115vh
+			&:after
+				content: ""
+				position: absolute
+				margin: -20px
+				width: calc(100% - 2px)
+				height: 140px
+				transform: rotate(1deg)
+				background-color: #F4F4F4
+				bottom: -286px
 
 	.wrapper
 		position: relative
@@ -87,7 +101,6 @@
 
 		.article
 			max-width: $width_content
-			padding: 0 40px
 
 	.wrapper_color_2
 		position: relative
