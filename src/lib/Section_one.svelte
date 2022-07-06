@@ -23,6 +23,7 @@
 	align-items: center
 	height: 100vh
 	max-width: $width_content
+	font-family: 'Montserrat', sans-serif
 
 	.title
 		font-size: 30px
@@ -42,6 +43,7 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
+		gap: 30px
 
 		.amount
 			font-size: 64px

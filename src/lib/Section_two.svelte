@@ -12,6 +12,7 @@
 	justify-content: center
 	align-items: center
 	color: #262626
+	font-family: 'Montserrat', sans-serif
 
 	.title
 		font-size: 30px

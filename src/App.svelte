@@ -41,9 +41,7 @@
 
 <style lang="sass">
 @import "src/assets/styles/_vars"
-
-*
-	font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+@import "normalize.css"
 
 .main
 	display: flex

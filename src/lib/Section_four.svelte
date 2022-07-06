@@ -18,6 +18,7 @@
 	gap: 50px
 	width: 100%
 	padding: 100px 0
+	font-family: 'Montserrat', sans-serif
 
 	@media screen and (min-width: 1240px)
 		flex-direction: row

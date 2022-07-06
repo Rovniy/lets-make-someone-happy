@@ -43,6 +43,7 @@
 	justify-content: center
 	align-items: center
 	width: 100%
+	font-family: 'Montserrat', sans-serif
 
 	.title
 		font-size: 30px

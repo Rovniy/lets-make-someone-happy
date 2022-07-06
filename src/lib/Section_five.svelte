@@ -15,6 +15,7 @@
 	gap: 50px
 	width: 100%
 	margin-top: 120px
+	font-family: 'Montserrat', sans-serif
 
 	.title
 		font-size: 30px

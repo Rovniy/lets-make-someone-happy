@@ -12,11 +12,12 @@
 @import "src/assets/styles/_vars"
 
 .step_block
-	width: 90%
+	width: 85%
 	background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
 	border-radius: 4px
 	position: relative
 	padding: 58px 0 30px 30px
+	font-family: 'Montserrat', sans-serif
 
 	@media screen and (min-width: 1240px)
 		max-width: 610px

@@ -21,15 +21,23 @@
 		font-size: 16px
 		color: #262626
 		font-weight: 700
+		margin-left: 20px
 
 		@media screen and (min-width: 720px)
 			font-size: 20px
+
+		@media screen and (min-width: 1240px)
+			margin-left: 0
 
 	.name
 		font-size: 12px
 		color: rgba(0, 0, 0, 0.5)
 		font-weight: 700
+		margin-right: 20px
 
 		@media screen and (min-width: 720px)
 			font-size: 16px
+
+		@media screen and (min-width: 1240px)
+			margin-right: 0
 </style>

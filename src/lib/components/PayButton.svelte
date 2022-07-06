@@ -14,6 +14,7 @@
 	justify-content: center
 	align-items: center
 	gap: 30px
+	font-family: 'Montserrat', sans-serif
 
 	.button
 		background: #34FFB6
