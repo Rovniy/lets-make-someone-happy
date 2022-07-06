@@ -1,60 +1,139 @@
 <script lang="ts">
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+    import Header from './lib/Header.svelte'
+    import Section_one from './lib/Section_one.svelte'
+    import Section_two from './lib/Section_two.svelte'
+    import Section_three from './lib/Section_three.svelte'
+    import Section_four from './lib/Section_four.svelte'
+    import Section_five from './lib/Section_five.svelte'
+    import Section_six from './lib/Section_six.svelte'
+    import Footer from './lib/Footer.svelte'
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Typescript!</h1>
+<main class="main">
+	<section class="main_wrapper">
+		<article class="wrapper">
+			<Header />
+			<Section_one />
+		</article>
+	</section>
 
-  <Counter />
+	<section class="wrapper">
+		<Section_two />
+		<Section_three />
+	</section>
 
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
+	<section class="wrapper_color_1">
+		<article class="article">
+			<Section_four />
+		</article>
+	</section>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
+	<section class="wrapper">
+		<Section_five />
+	</section>
+
+	<section class="wrapper_color_2">
+		<article class="article">
+			<Section_six />
+		</article>
+		<img class="image" src="./src/assets/images/take_money.svg" alt="take money">
+	</section>
+
+	<section class="wrapper">
+		<Footer />
+	</section>
+
+	<img class="blur_dot" src="./src/assets/images/dot_blur.svg" alt="blur_dot">
 </main>
 
 <style lang="sass">
-*
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@import "src/assets/styles/_vars"
+@import "normalize.css"
 
+.main
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	background: #F4F4F4
+	z-index: 1
 
-main
-  text-align: center
-  padding: 1em
-  margin: 0 auto
+	.main_wrapper
+		width: 100%
+		height: 100vh
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		background-image: url('./assets/images/image_main.png')
 
+		@media screen and (min-width: 720px)
+			height: 115vh
+			&:after
+				content: ""
+				position: absolute
+				margin: -20px
+				width: calc(100% - 2px)
+				height: 140px
+				transform: rotate(1deg)
+				background-color: #F4F4F4
+				bottom: -286px
 
-img
-  height: 16rem
-  width: 16rem
+	.wrapper
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		max-width: $width_content
 
-h1
-  color: #ff3e00
-  text-transform: uppercase
-  font-size: 4rem
-  font-weight: 100
-  line-height: 1.1
-  margin: 2rem auto
-  max-width: 14rem
+	.wrapper_color_1
+		width: 100%
+		background: #262626
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin-top: 120px
 
+		.article
+			max-width: $width_content
 
-p
-  max-width: 14rem
-  margin: 1rem auto
-  line-height: 1.35
+	.wrapper_color_2
+		position: relative
+		width: 100%
+		background: #017AF1
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		margin-top: 120px
 
-@media (min-width: 480px)
-  h1
-    max-width: none
+		.article
+			width: 100%
+			height: 600px
+			@media screen and (min-width: 1240px)
+				padding: 0 40px
+				width: $width_content
+				height: auto
 
+	.image
+		position: absolute
+		bottom: 0
+		width: 300px
 
-  p
-    max-width: none
+		@media screen and (min-width: 480px)
+			width: auto !important
+
+		@media screen and (min-width: 1240px)
+			right: 0
+			top: -20px
+
+	.blur_dot
+		position: absolute
+		left: -200px
+		top: 1400px
 </style>
