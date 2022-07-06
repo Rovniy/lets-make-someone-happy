@@ -1,14 +1,12 @@
-<section class="section_two">
-	<article class="article_one">
-		<h2 class="title">Why is this necessary?</h2>
-		<p class="description">Each of us does not mind a dollar, it is a small amount. But getting a large sum at once is an event that can change the life of any of us! If 1000 people chip in for $1, then someone will receive $1000 and will be able to pay bills, make a long-awaited purchase, go on vacation or postpone for a great cause. Each of us can put a hand to this and maybe luck will smile on you and it will be you who will receive the community gathering.</p>
-	</article>
-</section>
+<article class="section_two">
+	<h2 class="title">Why is this necessary?</h2>
+	<p class="description">Each of us does not mind a dollar, it is a small amount. But getting a large sum at once is an event that can change the life of any of us! If 1000 people chip in for $1, then someone will receive $1000 and will be able to pay bills, make a long-awaited purchase, go on vacation or postpone for a great cause. Each of us can put a hand to this and maybe luck will smile on you and it will be you who will receive the community gathering.</p>
+</article>
 
 <style lang="sass">
 @import "src/assets/styles/_vars"
 
-.article_one
+.section_two
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -20,6 +18,7 @@
 		line-height: 95%
 		font-weight: 700
 		margin: 120px 0
+		text-transform: uppercase
 
 		@media screen and (min-width: 720px)
 			font-size: 36px

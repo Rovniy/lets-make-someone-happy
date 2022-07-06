@@ -1,4 +1,4 @@
-<section class="section_one">
+<article class="section_one">
 	<h1 class="title">Just give $1 that will change the life of one of us</h1>
 
 	<div class="amount_area">
@@ -10,7 +10,7 @@
 		<button type="button" class="button">Make you happy for $1</button>
 		<span class="info">You already sent $1</span>
 	</div>
-</section>
+</article>
 
 <style lang="sass">
 @import "src/assets/styles/_vars"

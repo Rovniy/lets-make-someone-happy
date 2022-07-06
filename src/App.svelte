@@ -2,14 +2,16 @@
     import Header from './lib/Header.svelte'
     import Section_one from './lib/Section_one.svelte'
     import Section_two from './lib/Section_two.svelte'
+    import Section_three from './lib/Section_three.svelte'
 </script>
 
 <main class="main">
-	<div class="wrapper">
+	<section class="wrapper">
 		<Header />
 		<Section_one />
 		<Section_two />
-	</div>
+		<Section_three />
+	</section>
 </main>
 
 <style lang="sass">
