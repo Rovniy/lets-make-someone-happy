@@ -24,6 +24,8 @@
 	height: 100vh
 	max-width: $width_content
 	font-family: 'Montserrat', sans-serif
+	margin-bottom: 50px
+	z-index: 1
 
 	.title
 		font-size: 30px

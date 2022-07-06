@@ -16,6 +16,7 @@
 	font-family: 'Montserrat', sans-serif
 	background: transparent
 	width: 100%
+	z-index: 1
 
 	.action
 		font-size: 16px

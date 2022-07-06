@@ -24,6 +24,7 @@
 		margin: 120px 0
 		text-align: center
 		text-transform: uppercase
+		padding: 0 20px
 
 		@media screen and (min-width: 720px)
 			font-size: 36px

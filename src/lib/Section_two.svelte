@@ -13,12 +13,14 @@
 	align-items: center
 	color: #262626
 	font-family: 'Montserrat', sans-serif
+	z-index: 2
 
 	.title
 		font-size: 30px
 		line-height: 95%
 		font-weight: 700
-		margin: 120px 0
+		margin-top: 0
+		margin-bottom: 120px
 		text-transform: uppercase
 		text-align: center
 

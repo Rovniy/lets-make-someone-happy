@@ -37,6 +37,8 @@
 	<section class="wrapper">
 		<Footer />
 	</section>
+
+	<img class="blur_dot" src="./src/assets/images/dot_blur.svg" alt="blur_dot">
 </main>
 
 <style lang="sass">
@@ -49,6 +51,22 @@
 	justify-content: center
 	align-items: center
 	background: #F4F4F4
+	z-index: 1
+
+	&:after
+		filter: none
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		background-image: url('./assets/images/image_main.png')
+		width: 100%
+		height: 100vh
+		z-index: 0
 
 	.wrapper
 		position: relative
@@ -99,5 +117,10 @@
 
 		@media screen and (min-width: 1240px)
 			right: 0
-			top: -17px
+			top: -20px
+
+	.blur_dot
+		position: absolute
+		left: -200px
+		top: 1400px
 </style>
