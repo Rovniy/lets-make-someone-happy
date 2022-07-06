@@ -3,9 +3,9 @@
 <ellipse cx="216.405" cy="216" rx="51.4048" ry="51" fill="#5C63FF"/>
 </g>
 <defs>
-<filter id="filter0_f_617_38" x="0" y="0" width="432.81" height="432" color-interpolation-filters="sRGB">
+<filter id="filter0_f_617_38" x="0" y="0" width="432.81" height="432" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="82.5" result="effect1_foregroundBlur_617_38"/>
 </filter>
 </defs>

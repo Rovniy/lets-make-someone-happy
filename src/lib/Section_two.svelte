@@ -19,7 +19,6 @@
 		font-size: 30px
 		line-height: 95%
 		font-weight: 700
-		margin-top: 0
 		margin-bottom: 120px
 		text-transform: uppercase
 		text-align: center
