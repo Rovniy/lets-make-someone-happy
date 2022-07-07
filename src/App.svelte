@@ -36,14 +36,14 @@
 		<article class="article">
 			<Section_six />
 		</article>
-		<img class="image" src="./src/assets/images/take_money.svg" alt="take money">
+		<img class="image" src="/images/take_money.svg" alt="take money">
 	</section>
 
 	<section class="wrapper">
 		<Footer />
 	</section>
 
-	<img class="blur_dot" src="./src/assets/images/dot_blur.svg" alt="blur_dot">
+	<img class="blur_dot" src="/images/dot_blur.svg" alt="blur_dot">
 </main>
 
 <style lang="sass">

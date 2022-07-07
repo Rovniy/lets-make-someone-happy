@@ -5,7 +5,7 @@
 <div class="step_block {step.idx % 2 === 0 ? 'align-self-end' : 'align-self-start'}">
 	<span class="description">{step.description}</span>
 	<span class="number">{step.idx}</span>
-	<img class="image" src="./src/assets/images/step_{step.idx}.svg" alt="step">
+	<img class="image" src="/images/step_{step.idx}.svg" alt="step">
 </div>
 
 <style lang="sass">

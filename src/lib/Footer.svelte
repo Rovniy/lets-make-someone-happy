@@ -6,13 +6,13 @@
 		<div class="social">
 			<div class="links">
 				<a href="#" rel="noopener">
-					<img src="./src/assets/images/telegram.svg" alt="telegram" width="30" height="30">
+					<img src="/images/telegram.svg" alt="telegram" width="30" height="30">
 				</a>
 				<a href="#" rel="noopener">
-					<img src="./src/assets/images/twitter.svg" alt="twitter" width="30" height="30">
+					<img src="/images/twitter.svg" alt="twitter" width="30" height="30">
 				</a>
 				<a href="#" rel="noopener">
-					<img src="./src/assets/images/github.svg" alt="github" width="30" height="30">
+					<img src="/images/github.svg" alt="github" width="30" height="30">
 				</a>
 			</div>
 			<span class="info">Idea and implementation by Andrew (Ravy) Rovniy</span>
