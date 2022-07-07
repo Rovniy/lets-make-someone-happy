@@ -68,7 +68,7 @@
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: center
-		background-image: url('./assets/images/image_main.png')
+		background-image: url('/images/image_main.png')
 
 		@media screen and (min-width: 720px)
 			height: 115vh
