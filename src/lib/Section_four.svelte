@@ -1,10 +1,12 @@
 <script>
 	import PayButton from './components/PayButton.svelte'
+
+	export let global = undefined;
 </script>
 
 <article class="section_four">
 	<div class="description">I Doing good to others will definitely get it back!</div>
-	<PayButton isWhiteText="true"/>
+	<PayButton isWhiteText="true" bind:global />
 </article>
 
 <style lang="sass">
@@ -18,15 +20,15 @@
 	gap: 50px
 	width: 100%
 	padding: 100px 0
-	font-family: 'Montserrat', sans-serif
-
-	@media screen and (min-width: 1240px)
+	@media screen and (min-width: $content_xl)
 		flex-direction: row
 		gap: 370px
 
 	.description
-		font-weight: 800
-		font-size: 36px
-		color: #FFFFFF
+		color: $color_white
 		padding: 0 40px
+		text-align: center
+		font: 800 36px/1 $main_font_family
+		@media screen and (min-width: $content_xl)
+			text-align: left
 </style>

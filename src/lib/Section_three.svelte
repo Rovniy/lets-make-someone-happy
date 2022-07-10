@@ -43,16 +43,12 @@
 	justify-content: center
 	align-items: center
 	width: 100%
-	font-family: 'Montserrat', sans-serif
 
 	.title
-		font-size: 30px
-		line-height: 95%
-		font-weight: 700
 		margin-bottom: 120px
 		text-transform: uppercase
-
-		@media screen and (min-width: 720px)
+		font: 700 30px/95% $main_font_family
+		@media screen and (min-width: $content_md)
 			font-size: 36px
 
 	.steps

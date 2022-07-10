@@ -7,24 +7,37 @@
     import Section_five from './lib/Section_five.svelte'
     import Section_six from './lib/Section_six.svelte'
     import Footer from './lib/Footer.svelte'
+
+	import {onMount} from "svelte";
+	import {API} from "./constants";
+
+	let global = {}
+
+	onMount(async function () {
+		const response = await fetch(API._BASE + API.NOW)
+		global = await response.json()
+	});
 </script>
 
 <main class="main">
 	<section class="main_wrapper">
 		<article class="wrapper">
 			<Header />
-			<Section_one />
+			<Section_one bind:global />
 		</article>
 	</section>
 
 	<section class="wrapper">
 		<Section_two />
+	</section>
+
+	<section class="wrapper">
 		<Section_three />
 	</section>
 
 	<section class="wrapper_color_1">
 		<article class="article">
-			<Section_four />
+			<Section_four bind:global />
 		</article>
 	</section>
 
@@ -34,7 +47,7 @@
 
 	<section class="wrapper_color_2">
 		<article class="article">
-			<Section_six />
+			<Section_six bind:global />
 		</article>
 		<img class="image" src="/images/take_money.svg" alt="take money" loading="lazy">
 	</section>
@@ -57,6 +70,8 @@
 	align-items: center
 	background: #F4F4F4
 	z-index: 1
+	overflow-x: hidden
+	max-width: 100%
 
 	.main_wrapper
 		width: 100%
@@ -65,22 +80,22 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: center
-		background-image: url('/images/image_main.png')
-
+		background: url('/images/image_main.png') no-repeat center center / cover
 		@media screen and (min-width: 720px)
-			height: 115vh
-			&:after
-				content: ""
-				position: absolute
-				margin: -20px
-				width: calc(100% - 2px)
-				height: 140px
-				transform: rotate(1deg)
-				background-color: #F4F4F4
-				bottom: -286px
+			height: 100vh
+
+		&:after
+			$_height: 90px
+
+			content: ""
+			position: absolute
+			height: 0
+			width: 0
+			border-style: solid
+			border-width: $_height 0 0 100vw
+			border-color: transparent transparent transparent $color_light
+			bottom: -1px
+
 
 	.wrapper
 		position: relative
@@ -89,6 +104,7 @@
 		justify-content: center
 		align-items: center
 		max-width: $width_content
+		width: 100%
 
 	.wrapper_color_1
 		width: 100%

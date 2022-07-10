@@ -1,17 +1,31 @@
-<script>
-	import PayButton from './components/PayButton.svelte'
-</script>
-
 <article class="section_one">
-	<h1 class="title">Just give $1 that will change the life of one of us</h1>
+	<h1 class="title">Just donate {#if global?.initial_value}${global?.initial_value}{:else}1{/if} that will change the life of one of us</h1>
 
 	<div class="amount_area">
-		<div class="amount">$1.200</div>
+		{#if global?.money_pool}
+			<div class="amount">$ {thousands(global?.money_pool)}</div>
+		{:else}
+			<div class="amount">$ {thousands(1_000)}</div>
+		{/if}
+
 		<span class="message">Already collected</span>
+
+		{#if global?.target_date}
+			<span class="remaining">{getRemainingTime}</span>
+		{/if}
 	</div>
 
-	<PayButton/>
+	<PayButton bind:global/>
 </article>
+
+<script>
+	import PayButton from './components/PayButton.svelte'
+	import { thousands, parseSecondsToRemainingTime } from '/src/helpers'
+
+	export let global = undefined;
+
+	$: getRemainingTime = parseSecondsToRemainingTime(global?.target_date)
+</script>
 
 <style lang="sass">
 @import "src/assets/styles/_vars"
@@ -23,21 +37,16 @@
 	align-items: center
 	height: 100vh
 	max-width: $width_content
-	font-family: 'Montserrat', sans-serif
-	margin-bottom: 50px
 	z-index: 1
 
 	.title
-		font-size: 30px
-		color: #262626
-		font-weight: 900
+		font: 900 30px/95% $main_font_family
+		color: $color_primary
 		text-align: center
-		line-height: 95%
 		text-transform: uppercase
 		padding: 0 20px
 		margin-top: 100px
-
-		@media screen and (min-width: 720px)
+		@media screen and (min-width: $content_md)
 			font-size: 64px
 
 	.amount_area
@@ -48,13 +57,15 @@
 		gap: 30px
 
 		.amount
-			font-size: 64px
-			color: #017AF1
-			font-weight: 800
+			font: 800 64px/64px $main_font_family
+			color: $color_highlight
 
 		.message
-			font-size: 20px
-			color: #3A3A3A
-			font-weight: 800
+			font: 800 20px/20px $main_font_family
+			color: $color_secondary
 			text-transform: uppercase
+
+		.remaining
+			font: 500 16px/16px $main_font_family
+			color: $color_secondary
 </style>

@@ -11,27 +11,23 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
-	color: #262626
-	font-family: 'Montserrat', sans-serif
+	color: $color_primary
 	z-index: 2
-	margin-top: -80px
 
 	.title
-		font-size: 30px
 		line-height: 95%
-		font-weight: 700
 		margin-bottom: 120px
 		text-transform: uppercase
 		text-align: center
+		font: 700 30px/95% $main_font_family
 
 		@media screen and (min-width: 720px)
 			font-size: 36px
 
 	.description
-		font-size: 16px
-		line-height: 160%
-		font-weight: 600
 		margin-bottom: 120px
 		text-align: center
 		padding: 0 20px
+		font: 500 16px/200% $main_font_family
+
 </style>

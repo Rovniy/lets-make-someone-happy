@@ -1,48 +1,49 @@
 <header class="header">
-	<span class="action">Let’s make someone happy</span>
-	<span class="name">by A.Rovniy</span>
+	<a href="/" class="action">{SITE_NAME}</a>
+	<a href="{telegramLink}" target="_blank" class="name">by {AUTHOR_SHORT}</a>
 </header>
 
+<script>
+	import { SITE_NAME, AUTHOR_SHORT, SOCIAL } from '/src/constants'
+
+	export let telegramLink = SOCIAL.find(i => i.name === 'telegram').link
+</script>
 <style lang="sass">
 @import "src/assets/styles/_vars"
 
 .header
 	position: absolute
-	top: 20px
+	top: 0
 	display: flex
 	flex-direction: row
 	justify-content: space-between
 	align-items: center
-	font-family: 'Montserrat', sans-serif
 	background: transparent
 	width: 100%
-	z-index: 1
+	z-index: 2
 	margin-top: 40px
 
-	@media screen and (min-width: 720px)
-		margin-top: 0
-
 	.action
-		font-size: 16px
-		color: #262626
-		font-weight: 700
+		color: $color_primary
 		margin-left: 20px
-
-		@media screen and (min-width: 720px)
+		font: 700 16px/16px $main_font_family
+		text-decoration: none
+		@media screen and (min-width: $content_md)
 			font-size: 20px
-
-		@media screen and (min-width: 1240px)
+		@media screen and (min-width: $content_xl)
 			margin-left: 0
+		&:hover
+			text-decoration: underline
 
 	.name
-		font-size: 12px
 		color: rgba(0, 0, 0, 0.5)
-		font-weight: 700
 		margin-right: 20px
-
-		@media screen and (min-width: 720px)
+		font: 700 12px/12px $main_font_family
+		text-decoration: none
+		@media screen and (min-width: $content_md)
 			font-size: 16px
-
-		@media screen and (min-width: 1240px)
+		@media screen and (min-width: $content_xl)
 			margin-right: 0
+		&:hover
+			text-decoration: underline
 </style>

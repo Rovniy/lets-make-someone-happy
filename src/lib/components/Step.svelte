@@ -13,13 +13,11 @@
 
 .step_block
 	width: 85%
-	background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+	background: linear-gradient(90deg, #FFFFFF 0%, $color_light 100%)
 	border-radius: 4px
 	position: relative
 	padding: 58px 0 30px 30px
-	font-family: 'Montserrat', sans-serif
-
-	@media screen and (min-width: 1240px)
+	@media screen and (min-width: $content_xl)
 		max-width: 610px
 
 		&.align-self-start
@@ -32,13 +30,17 @@
 		position: absolute
 		top: -42px
 		left: 60px
-		color: #017AF1
-		font-size: 64px
-		font-weight: 700
+		color: $color_highlight
+		font: 700 64px/1 $main_font_family
+
+	.description
+		color: $color_primary
+		font: 500 18px/1 $main_font_family
 
 	.image
 		position: absolute
 		top: -35px
 		right: 60px
+		z-index: 1
 
 </style>
