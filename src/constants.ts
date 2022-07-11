@@ -1,5 +1,12 @@
+export const MAIN_DOMAIN = 'letschangesomeonehappy.com'
+export const API_FULL_DOMAIN = 'http://localhost:3100'
+export const SITE_NAME = 'Let\'s change someone life'
+export const AUTHOR_SHORT = 'A. Rovniy'
+export const AUTHOR_FULL = 'Andrew (Ravy) Rovniy'
+export const AUTHOR_MAIL = 'contact@ravy.pro'
+
 export const API = {
-    _BASE: 'http://localhost:3100',
+    _BASE: API_FULL_DOMAIN,
     NOW: '/now',
     DONATE: '/donate'
 }
@@ -19,7 +26,4 @@ export const SOCIAL = [
     }
 ]
 
-export const SITE_NAME = 'Let\'s change someone life'
-export const AUTHOR_SHORT = 'A. Rovniy'
-export const AUTHOR_FULL = 'Andrew (Ravy) Rovniy'
-export const AUTHOR_MAIL = 'contact@ravy.pro'
+

@@ -2,7 +2,7 @@
 	<article class="about">
 		<p class="description">
 			The project is not a lottery and does not guarantee a win. Any contribution and payment is a donation. Making a payment means agreeing to this offer.
-			Project letsmakesomeonehappy.com does not take commission or payment for transactions. The commission of 3% is provided only by the acquiring system when transferring funds. The payment of taxes is the responsibility of the recipient of the funds.
+			Project ${MAIN_DOMAIN} does not take commission or payment for transactions. The commission of 3% is provided only by the acquiring system when transferring funds. The payment of taxes is the responsibility of the recipient of the funds.
 		</p>
 
 		<div class="social">
@@ -20,7 +20,7 @@
 </footer>
 
 <script>
-	import { SOCIAL, AUTHOR_FULL, AUTHOR_MAIL } from '/src/constants'
+	import { SOCIAL, AUTHOR_FULL, AUTHOR_MAIL, MAIN_DOMAIN } from '/src/constants'
 </script>
 
 <style lang="sass">
