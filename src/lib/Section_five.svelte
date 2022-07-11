@@ -1,38 +1,47 @@
 <article class="section_five">
-    <h2 class="title">Who has already received the long-awaited gift of fate?</h2>
+	<h2 class="title">Who has already received the long-awaited gift of fate?</h2>
 
-    {#each db as post}
-        {@html post}
-    {/each}
+	<div class="twitter_wrapper">
+		{#each db as post}
+			{@html post}
+		{/each}
+	</div>
 </article>
 
 <script>
-    import {onMount} from "svelte";
-    import DB from '/src/assets/db/twitts'
+	import {onMount} from 'svelte'
+	import DB from '/src/assets/db/twitts'
 
-    let db = []
+	let db = []
 
-    onMount(() => db = DB)
+	onMount(() => db = DB)
 </script>
 
 <style lang="sass">
-  @import "src/assets/styles/_vars"
+	@import "src/assets/styles/_vars"
 
-  .section_five
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    align-items: center
-    gap: 50px
-    width: 100%
+	.section_five
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		width: 100%
 
-    .title
-      margin: 120px 0
-      text-align: center
-      text-transform: uppercase
-      padding: 0 20px
-      font: 700 30px/95% $main_font_family
+		.title
+			margin: 120px 0
+			text-align: center
+			text-transform: uppercase
+			padding: 0 20px
+			font: 700 30px/95% $main_font_family
+			@media screen and (min-width: $content_md)
+				font-size: 36px
 
-      @media screen and (min-width: 720px)
-        font-size: 36px
+		.twitter_wrapper
+			width: 90%
+			display: grid
+			grid-template-columns: 100%
+			justify-items: center
+			@media screen and (min-width: $content_xl)
+				width: 100%
+				grid-template-columns: 50% 50%
 </style>

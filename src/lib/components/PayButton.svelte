@@ -1,6 +1,6 @@
 <div class="button_area">
 	<button type="button" class="button" on:click="{donateRequest}">Make you happy for ${global?.initial_value || 1}</button>
-	{#if false}<span class="info" class:text_white={isWhiteText}>You already sent $1</span>{/if}
+	{#if false}<span class="info" class:text_white={isWhiteText}>You already sent $${global?.initial_value || 1}</span>{/if}
 </div>
 
 <script>

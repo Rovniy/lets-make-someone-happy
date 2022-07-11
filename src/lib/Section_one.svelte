@@ -5,7 +5,7 @@
 		{#if global?.money_pool}
 			<div class="amount">$ {thousands(global?.money_pool)}</div>
 		{:else}
-			<div class="amount">$ {thousands(1_000)}</div>
+			<div class="amount">$ {thousands(1)}</div>
 		{/if}
 
 		<span class="message">Already collected</span>
@@ -57,8 +57,10 @@
 		gap: 30px
 
 		.amount
-			font: 800 64px/64px $main_font_family
+			font: 800 80px/80px $main_font_family
 			color: $color_highlight
+			@media screen and (min-width: $content_md)
+				font: 800 124px/124px $main_font_family
 
 		.message
 			font: 800 20px/20px $main_font_family

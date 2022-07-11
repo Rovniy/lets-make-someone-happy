@@ -13,14 +13,14 @@
 					</a>
 				{/each}
 			</div>
-			<span class="info">Idea and implementation by Andrew (Ravy) Rovniy</span>
-			<a class="email" href="mailto:contact@ravy.pro" rel="noopener">contact@ravy.pro</a>
+			<span class="info">Idea and implementation by {AUTHOR_FULL}</span>
+			<a class="email" href="mailto:{AUTHOR_MAIL}" rel="noopener">{AUTHOR_MAIL}</a>
 		</div>
 	</article>
 </footer>
 
 <script>
-	import { SOCIAL } from '/src/constants'
+	import { SOCIAL, AUTHOR_FULL, AUTHOR_MAIL } from '/src/constants'
 </script>
 
 <style lang="sass">
@@ -58,8 +58,11 @@
 				justify-content: center
 				align-items: center
 				gap: 40px
+				flex-wrap: wrap
 
 			.info
+				padding: 0 10px
+				text-align: center
 				font: 500 14px/1 $main_font_family
 
 			.email

@@ -22,3 +22,4 @@ export const SOCIAL = [
 export const SITE_NAME = 'Let\'s change someone life'
 export const AUTHOR_SHORT = 'A. Rovniy'
 export const AUTHOR_FULL = 'Andrew (Ravy) Rovniy'
+export const AUTHOR_MAIL = 'contact@ravy.pro'

@@ -143,6 +143,7 @@
 
 		@media screen and (min-width: 480px)
 			width: auto !important
+			max-height: 100%
 
 		@media screen and (min-width: 1240px)
 			right: 0
