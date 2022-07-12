@@ -1,5 +1,5 @@
 export const MAIN_DOMAIN = 'letschangesomeonehappy.com'
-export const API_FULL_DOMAIN = 'http://localhost:3100'
+export const API_FULL_DOMAIN = 'http://localhost:3000'
 export const SITE_NAME = 'Let\'s change someone life'
 export const AUTHOR_SHORT = 'A. Rovniy'
 export const AUTHOR_FULL = 'Andrew (Ravy) Rovniy'
