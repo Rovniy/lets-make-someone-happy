@@ -80,7 +80,7 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		background: url('/images/image_main.png') no-repeat center center / cover
+		background: url('/images/image_main.jpg') no-repeat center center / cover
 		@media screen and (min-width: 720px)
 			height: 100vh
 

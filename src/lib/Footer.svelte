@@ -13,14 +13,22 @@
 					</a>
 				{/each}
 			</div>
+
 			<span class="info">Idea and implementation by {AUTHOR_FULL}</span>
+
 			<a class="email" href="mailto:{AUTHOR_MAIL}" rel="noopener">{AUTHOR_MAIL}</a>
+
+			<a href="{telegramLink}" target="_blank" class="name">
+				<img class="author" src="/images/ravy.png" alt="ravy" />
+			</a>
 		</div>
 	</article>
 </footer>
 
 <script>
 	import { SOCIAL, AUTHOR_FULL, AUTHOR_MAIL, MAIN_DOMAIN } from '/src/constants'
+
+	export let telegramLink = SOCIAL.find(i => i.name === 'telegram').link
 </script>
 
 <style lang="sass">
@@ -72,4 +80,8 @@
 
 				&:hover
 					text-decoration: underline
+
+			.name
+				.author
+					max-height: 50px
 </style>
