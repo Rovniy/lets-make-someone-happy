@@ -1,5 +1,5 @@
-export const MAIN_DOMAIN = 'letschangesomeonehappy.com'
-export const API_FULL_DOMAIN = 'https://letschangesomeonehappy.com'
+export const MAIN_DOMAIN = 'letschangesomeonelife.com'
+export const API_FULL_DOMAIN = 'https://' + MAIN_DOMAIN
 export const SITE_NAME = 'Let\'s change someone life'
 export const AUTHOR_SHORT = 'A. Rovniy'
 export const AUTHOR_FULL = 'Andrew (Ravy) Rovniy'
