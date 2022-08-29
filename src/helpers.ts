@@ -1,3 +1,5 @@
+import { CURRENCY } from './constants'
+
 export const thousands = val => {
     try {
         return parseInt(val).toLocaleString()
@@ -26,4 +28,8 @@ export const parseSecondsToRemainingTime = currentTimestamp => {
     }
 
     return result
+}
+
+export const currencyValue = (value : number = 1) => {
+	return `${thousands(value)} ${CURRENCY}`
 }

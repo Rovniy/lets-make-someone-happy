@@ -7,16 +7,16 @@
     import Section_five from './lib/Section_five.svelte'
     import Section_six from './lib/Section_six.svelte'
     import Footer from './lib/Footer.svelte'
+    import Modal from './lib/components/Modal.svelte'
 
-	import {onMount} from "svelte";
-	import {API} from "./constants";
+	import { onMount } from "svelte"
+	import { now } from "./api"
 
-	let global = {}
+	let global : object = {}
 
 	onMount(async function () {
-		const response = await fetch(API._BASE + API.NOW)
-		global = await response.json()
-	});
+		global = await now()
+	})
 </script>
 
 <main class="main">
@@ -53,13 +53,16 @@
 	</section>
 
 	<section class="wrapper">
-		<Footer />
+		<Footer bind:global />
 	</section>
 
 	<img class="blur_dot" src="/images/dot_blur.svg" alt="blur_dot" loading="lazy">
+
+<!--	<Modal />-->
 </main>
 
 <style lang="sass">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap')
 @import "src/assets/styles/_vars"
 @import "normalize.css"
 
@@ -95,7 +98,6 @@
 			border-width: $_height 0 0 100vw
 			border-color: transparent transparent transparent $color_light
 			bottom: -1px
-
 
 	.wrapper
 		position: relative

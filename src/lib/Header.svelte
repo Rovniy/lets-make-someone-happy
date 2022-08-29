@@ -3,16 +3,12 @@
 		<img src="/images/logo.png" alt="logo" class="logo" />
 		<span class="logo_title">{SITE_NAME}</span>
 	</a>
-	<a href="{telegramLink}" target="_blank" class="name">
-		<img class="author" src="/images/ravy.png" alt="ravy" />
-	</a>
 </header>
 
 <script>
-	import { SITE_NAME, SOCIAL } from '/src/constants'
-
-	export let telegramLink = SOCIAL.find(i => i.name === 'telegram').link
+	import { SITE_NAME } from '/src/constants'
 </script>
+
 <style lang="sass">
 @import "src/assets/styles/_vars"
 

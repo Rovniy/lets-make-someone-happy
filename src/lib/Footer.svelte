@@ -1,8 +1,7 @@
 <footer class="footer">
 	<article class="about">
 		<p class="description">
-			The project is not a lottery and does not guarantee a win. Any contribution and payment is a donation. Making a payment means agreeing to this offer.
-			Project ${MAIN_DOMAIN} does not take commission or payment for transactions. The commission of 3% is provided only by the acquiring system when transferring funds. The payment of taxes is the responsibility of the recipient of the funds.
+			Сайт не является лотереей и не гарантирует выигрыш. Любой вклад и платеж считается благотворительным безвозмездным пожертвованием. Проект {MAIN_DOMAIN} берет комиссию в размере {global?.base_commission || '10'}% от собранной суммы. Система эквайринга берет комиссию 1-3% от собранной суммы, в зависимости от способа оплаты, при выводе средств. Оплата подоходного налога с выигрыша является обязательностью получателя средств.
 		</p>
 
 		<div class="social">
@@ -14,19 +13,17 @@
 				{/each}
 			</div>
 
-			<span class="info">Idea and implementation by {AUTHOR_FULL}</span>
+			<span class="info">Идея и разработка {AUTHOR_FULL}</span>
 
 			<a class="email" href="mailto:{AUTHOR_MAIL}" rel="noopener">{AUTHOR_MAIL}</a>
-
-			<a href="{telegramLink}" target="_blank" class="name">
-				<img class="author" src="/images/ravy.png" alt="ravy" />
-			</a>
 		</div>
 	</article>
 </footer>
 
 <script>
 	import { SOCIAL, AUTHOR_FULL, AUTHOR_MAIL, MAIN_DOMAIN } from '/src/constants'
+
+	export let global = undefined;
 
 	export let telegramLink = SOCIAL.find(i => i.name === 'telegram').link
 </script>

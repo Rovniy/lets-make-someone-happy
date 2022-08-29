@@ -1,10 +1,12 @@
 <div class="button_area">
-	<button type="button" class="button" on:click="{donateRequest}">Make you happy for ${global?.initial_value || 1}</button>
-	{#if false}<span class="info" class:text_white={isWhiteText}>You already sent $${global?.initial_value || 1}</span>{/if}
+	<button type="button" class="button" on:click="{donateRequest}">Осчастливить кого-то за {currencyValue(global?.initial_value)}</button>
+
+	{#if false}<span class="info" class:text_white={isWhiteText}>Уже отправлено {currencyValue(global?.initial_value)}</span>{/if}
 </div>
 
 <script>
 	import { API } from '/src/constants'
+	import { currencyValue } from '/src/helpers'
 
 	export let isWhiteText = false
 	export let global = undefined

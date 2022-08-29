@@ -1,14 +1,10 @@
 <article class="section_one">
-	<h1 class="title">Just donate {#if global?.initial_value}${global?.initial_value}{:else}1{/if} that will change the life of one of us</h1>
+	<h1 class="title">Просто задонать {currencyValue(global.initial_value)}, чтобы изменить чью-то жизнь!</h1>
 
 	<div class="amount_area">
-		{#if global?.money_pool}
-			<div class="amount">$ {thousands(global?.money_pool)}</div>
-		{:else}
-			<div class="amount">$ {thousands(1)}</div>
-		{/if}
+		<div class="amount">{currencyValue(global?.money_pool)}</div>
 
-		<span class="message">Already collected</span>
+		<span class="message">Уже собрано</span>
 
 		{#if global?.target_date}
 			<span class="remaining">{getRemainingTime}</span>
@@ -20,7 +16,7 @@
 
 <script>
 	import PayButton from './components/PayButton.svelte'
-	import { thousands, parseSecondsToRemainingTime } from '/src/helpers'
+	import { parseSecondsToRemainingTime, currencyValue } from '/src/helpers'
 
 	export let global = undefined;
 
